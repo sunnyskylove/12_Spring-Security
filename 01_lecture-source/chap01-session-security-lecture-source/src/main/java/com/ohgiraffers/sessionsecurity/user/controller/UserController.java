@@ -24,6 +24,7 @@ public class UserController {
     @PostMapping("/signup")
     public ModelAndView signup(ModelAndView mv, @ModelAttribute SignupDTO signupDTO) {
 
+        System.out.println("signupDTO = " + signupDTO);
         int result = userService.regist(signupDTO);
 
         String message = "";        // 빈공간 만들어줌~~

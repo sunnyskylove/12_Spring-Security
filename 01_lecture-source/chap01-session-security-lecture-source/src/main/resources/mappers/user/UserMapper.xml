@@ -23,7 +23,7 @@
         )
     </insert>
 
-    <resultMap id="login" type="com.ohgiraffers.sessionsecurity.user.model.dto.LoginUser">
+    <resultMap id="login" type="com.ohgiraffers.sessionsecurity.user.model.dto.LoginUserDTO">
         <id property="userCode" column="USER-NO"/>
         <result property="userID" column="USER_ID"/>
         <result property="userName" column="USER_NAME"/>
