@@ -22,6 +22,4 @@ public class MainController {
         return "/user/user";
     }
 
-
-
 }

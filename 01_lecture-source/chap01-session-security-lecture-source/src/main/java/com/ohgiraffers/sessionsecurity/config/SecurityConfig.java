@@ -69,7 +69,7 @@ public class SecurityConfig {
             auth.anyRequest().authenticated();   // 여기선 authenticated_인증이 된 사람들만(로그인 한 사람만) 들어갈 수 있도록 권한주기
 
         }).formLogin(login -> {
-            /* 참고. 로그인 페이지에 해당되는 서블릿이 존재해야 한다..(즉, 이 페이지가 만들어져 있어야 한다!) */
+            /* 참고. 로그인 페이지에 해당되는 서블릿이 존재해야 한다. (즉, 이 페이지가 만들어져 있어야 한다!) */
             login.loginPage("/auth/login");
             login.usernameParameter("user");    // 사용자 id 입력 필드(input 태그의 name 속성과 일치)
             login.passwordParameter("pass");    // 사용자 pass 입력 필드(input 태그의 name 속성과 일치)
@@ -77,7 +77,7 @@ public class SecurityConfig {
 
             login.failureHandler(authFailHandler);     // *로그인에 실패 했을 시 처리할 커스텀 핸들러
 
-        }).logout( logout -> {
+        }).logout(logout -> {
             logout.logoutRequestMatcher(new AntPathRequestMatcher("/auth/logout"));
             logout.deleteCookies("JSESSIONID"); // 로그아웃 시 사용자의 JSESSIONID 삭제 (로그아웃 하면 세션 만료해줘야 해서 필요!)
 

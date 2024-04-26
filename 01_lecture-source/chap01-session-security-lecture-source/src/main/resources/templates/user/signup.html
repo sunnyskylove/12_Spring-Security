@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+    const message = `[[${message}]]`
+
+    if(message){
+        alert(message);
+        window.location.href="/auth/login";
+    }
+</script>
 </head>
 <body>
     <h1 style="text-align: center">회원가입</h1>
@@ -16,6 +24,8 @@
             <option value="ADMIN">관리자</option>
         </select><br>
         <button>회원가입</button>
+
+
     </form>
 
 </body>
